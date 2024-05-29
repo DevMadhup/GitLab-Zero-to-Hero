@@ -3,7 +3,8 @@
 > Today, we’re diving into the world of GitLab, an all-in-one DevOps platform that's changing the way developers collaborate and manage their projects.
 #
 ### What is GitLab?
-- GitLab is a comprehensive DevOps platform that offers everything from source code management to CI/CD (Continuous Integration and Continuous Deployment) pipelines, all integrated into one place. It’s designed to streamline the entire software development lifecycle, making it easier for teams to collaborate and deliver high-quality software faster.
+- GitLab is a comprehensive DevOps platform that offers everything from source code management to CI/CD (Continuous Integration and Continuous Deployment) pipelines, all integrated into one place.
+- It’s designed to streamline the entire software development lifecycle, making it easier for teams to collaborate and deliver high-quality software faster.
 
 #
 ### GitLab Key Features :
