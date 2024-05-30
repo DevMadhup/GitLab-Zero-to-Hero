@@ -37,3 +37,50 @@ There are multiple ways to onboard projects on Gitlab, We can see two types onbo
 
 #
 ### 2. Onboard project using "Create blank project" option :
+- Click on <b>New Project</b>
+<img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/New-proj.png" />
+
+<img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/Blank-proj.png" />
+
+#
+- Enter the project name, visibility and click on <b>Create Project</b>
+
+#
+- Login to your ubuntu server and clone the code which you want to onboard on Gitlab repository
+```bash
+git clone https://github.com/DevMadhup/django-todo-cicd.git
+```
+
+#
+- Go to the cloned repository
+```bash
+cd django-todo-cicd
+```
+
+#
+- Set your Gitlab remote origin repository
+```bash
+git remote set-url origin https://gitlab.com/devmadhup1/django-app.git
+```
+<img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/gitlab-seturl.png" />
+
+#
+- Push your code
+```bash
+git push -uf origin main
+```
+<b>Note: If your get error like below</b>
+<img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/Gitlab-pusherror.png"/>
+
+<b>Go to project: "Settings" → "Repository" → scroll down to "Protected branches" and allow "Force push" and "Allowed to push and merge" to Maintainers + Developers</b>
+<img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/gitlab-protectedBranch.png"/>
+
+#
+- Again try to push code (Execute this step only if you get error on first push) :
+<img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/Code-pushed-Gitlab.png"/>
+
+#
+- Verify on Gitlab :
+<img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/Verify-BlankCodePush-Gitlab.png"/>
+
+#
