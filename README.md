@@ -6,9 +6,9 @@
 
 ### Topics to be covered: 
 - What is Gitlab and Why Gitlab ?
-- How to create account on Gitlab ?
-- How to setup Gitlab on VM ?
-- How to onboard the project on Gitlab ?
-- What are variables, runners, stages, artifacts in Gitlab ?
-- How to add runners on Gitlab ?
+- How to <b>create account on Gitlab</b> ?
+- How to <b>setup Gitlab on VM</b> ?
+- How to <b>onboard the project on Gitlab</b> ?
+- What are <b>variables</b>, <b>runners</b>, <b>stages</b>, <b>artifacts</b> in Gitlab ?
+- How to <b>add runners on Gitlab</b> ?
 - Project on Gitlab 
