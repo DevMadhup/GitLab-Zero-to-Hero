@@ -179,3 +179,47 @@ deploy_job:
   stage: deploy
   script:
     - echo "Deploying the project..."
+```
+#
+# GitLab Artifacts
+- In GitLab CI/CD, artifacts are files and directories created by jobs and stored by GitLab after the job finishes. They are typically used to share data between jobs or to keep build results. <a href="https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html">Gitlab Artifacts</a>
+- Artifacts can be configured to be kept for a certain duration, and they can be used for debugging, testing, or deployment.
+
+#
+## Configuring Artifacts in GitLab CI/CD
+- To configure artifacts, we need to define them in your .gitlab-ci.yml file under the artifacts keyword within a job.
+- We can specify the paths to the files or directories you want to save as artifacts.
+
+### Example: 
+```bash
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building project..."
+    - mkdir -p build
+    - echo "Compiled files" > build/compiled.txt
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 week
+
+test_job:
+  stage: test
+  script:
+    - cat "./build/compiled.txt"
+```
+
+### Explanation: 
+- Build Job: 
+  - Creates a build/ directory and a file named compiled.txt inside it.
+  - The build/ directory is specified as an artifact path, so all its contents will be saved as artifacts.
+  - The artifacts will expire in one week.
+
+- Test Job:
+  - This job will print the content of compiled.txt 
+  
