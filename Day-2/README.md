@@ -84,3 +84,31 @@ git push -uf origin main
 <img src="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Assets/Verify-BlankCodePush-Gitlab.png"/>
 
 #
+# First CI/CD pipeline in Gitlab :
+
+- Navigate to your code repository
+- Create a new file <b>.gitlab-ci.yml</b> in your repository's root path.
+> Note: Name must be .gitlab-ci.yml only
+- Paste the below code in the <b>.gitlab-ci.yml</b> file and save it.
+```bash
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building project $CI_PROJECT_NAME"
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests""
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying to production"
+```
+- Scroll down and navigate to <b>Build > Jobs</b> to see your jobs.
