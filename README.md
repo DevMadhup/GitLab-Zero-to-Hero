@@ -9,6 +9,7 @@
 - How to <b>create account on Gitlab</b> ? <a href="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Day-1/README.md">Click me</a>
 - How to <b>setup Gitlab on VM</b> ? <a href="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Day-1/README.md">Click me</a>
 - How to <b>onboard the project on Gitlab</b> ? <a href="https://github.com/DevMadhup/GitLab-Zero-to-Hero/blob/main/Day-2/README.md">Click me</a>
+- How to create and run first Gitlab CI/CD pipeline ?
 - What are <b>variables</b>, <b>runners</b>, <b>stages</b>, <b>artifacts</b> in Gitlab ?
 - How to <b>add runners on Gitlab</b> ?
 - Project on Gitlab 
