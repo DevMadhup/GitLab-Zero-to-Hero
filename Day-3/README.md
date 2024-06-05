@@ -1,4 +1,4 @@
-# Gitlab variables, runners, stages and artifacts
+# Gitlab variables, stages and artifacts
 
 ## What are variables in Gitlab? 
 - In GitLab, variables are used to define values that can be used in the CI/CD pipeline configurations, making the pipelines more dynamic and flexible. They can store information like credentials, settings, or any other data that you want to reuse across multiple jobs and pipelines. <a href="https://docs.gitlab.com/ee/ci/variables/">Variables in GitLab</a>
