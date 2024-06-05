@@ -78,3 +78,104 @@
 
 - Save the Variable:
 - Click on the Add variable button to save your new secret variable.
+
+#
+# Stages in GitLab :
+- In GitLab CI/CD, stages are used to <b>define the sequence in which jobs are executed</b>. Jobs in the same stage are run in parallel, whereas stages themselves run sequentially. This means that all jobs in a stage must complete successfully before the next stage starts.
+
+## How to configure stages in .gitlab-ci.yml file :
+- you need to define the stages and then assign jobs to those stages.
+  
+### Steps :
+- <b>Define Stages</b>:
+  - Specify the stages in your .gitlab-ci.yml file. The order in which stages are listed is the order in which they will be executed.
+
+#
+- <b>Define Jobs</b>:
+  - Create jobs and assign them to the appropriate stages. Each job must specify a stage.
+
+#
+- <b>Specify Scripts</b>:
+  - Define the script that each job will run.
+
+#
+### Example:
+```bash
+# Define stages
+stages:
+  - build
+  - test
+  - deploy
+
+# Job definitions
+# Build job
+build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+    - # Add your build commands here
+
+# Test job 1
+test_job_1:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - # Add your test commands here
+
+# Test job 2
+test_job_2:
+  stage: test
+  script:
+    - echo "Running additional tests..."
+    - # Add your test commands here
+
+# Deploy job
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
+    - # Add your deploy commands here
+```
+## Explanation :
+- <b>Define Stages</b>:
+  - The stages keyword defines a list of stages in the order they should be executed.
+  ```bash
+  stages:
+  - build
+  - test
+  - deploy
+  ```
+
+#
+- <b>Define Jobs</b>:
+  - Each job specifies a stage to indicate when it should run.
+  - Jobs within the same stage will run in parallel.
+  ```bash
+  build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+  ```
+
+#  
+### Complete yaml file:
+```bash
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
