@@ -104,7 +104,7 @@ build_job:
 test_job:
   stage: test
   script:
-    - echo "Running tests""
+    - echo "Running tests"
 
 deploy_job:
   stage: deploy
